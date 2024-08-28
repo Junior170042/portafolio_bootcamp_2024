@@ -1,0 +1,201 @@
+@import url("../global_style.css");
+.contact-container {
+    background-image: url("../assets/images/contact-image.png");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    position: relative;
+    width: 100%;
+}
+
+.contact-form {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.contact-form .toast.show{
+    position: absolute;
+    width: 40%;
+    bottom: 50%;
+    text-align: center;
+    z-index: 4;
+}
+
+.toast-header{
+    min-height:40px;
+}
+
+.toast-header .btn-close{
+    position: absolute;
+    right: 20px;
+}
+
+.contact-form .toast .toast-body.success p{
+    color:rgb(113, 173, 57);
+    font-size: 18px;
+    font-weight: bold;
+
+}
+.contact-form .toast .toast-body.error p{
+    color:rgb(252, 167, 97);
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.contact-form .toast.show .toast-header{
+   position: relative;
+}
+
+.contact-form .toast.show .toast-header .me-auto{
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.contact-form .toast.show .toast-header .me-auto.error{
+    font-size: 24px;
+    color:chocolate;
+}
+.contact-form .toast.show .toast-header .me-auto.success{
+    font-size: 24px;
+    color:rgb(106, 245, 88);
+}
+
+.contact-form .toast.show .toast-header .me-auto.error,.contact-form .toast.show .toast-header .me-auto.success{
+    display: none;
+}
+.contact-form .toast.show .toast-header .me-auto.error.show,.contact-form .toast.show .toast-header .me-auto.success.show{
+    display: block;
+}
+
+.contact-container h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: rgb(56, 24, 2);
+}
+
+
+.contact-form form {
+    margin: 20px 0;
+}
+
+.contact-form form button {
+    padding: 10px;
+    font-size: 25px;
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+    margin: 8px;
+    border-radius: 8px;
+  margin-left: 20px;
+    transition: opacity .05s ease-in;
+    background-color: var(--primary-color);
+    color: #eee;
+}
+
+
+.forms{
+    opacity:1;
+    
+}
+
+.contact-form form button:hover {
+    opacity: .6;
+}
+
+.contact-form form .form-control {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    position: relative;
+}
+
+.contact-form form .form-control span {
+    font-size: 25px;
+    position: absolute;
+    color: rgb(0, 0, 7);
+    margin-bottom: 10px;
+    user-select: none;
+    bottom: 20px;
+    transition: all .8s ease;
+}
+
+.contact-form form .form-control input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    z-index: 2;
+    padding: 4px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(234, 232, 240);
+    background-color: transparent;
+    transition: all .8s ease;
+}
+
+.contact-form form .form-control textarea {
+    width: 100%;
+    z-index: 2;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgb(234, 232, 240);
+    background-color: transparent;
+    transition: all .8s ease;
+    padding: 6px;
+    height: 80px;
+    resize: none;
+}
+
+.contact-form form .form-control input:focus{
+    padding: 8px;
+    background-color: #fdf9f9;
+    border-radius: 6px;
+    border: 1px solid rgba(52, 9, 209, 0.867);
+}
+
+
+
+.contact-form form .form-control input:focus~span {
+    top: -25px;
+    font-size: 18px;
+    z-index: 3;
+}
+
+.contact-form form .form-control textarea:focus {
+    height: 100px;
+    background-color: #fdf9f9;
+     border-radius: 6px;
+     border: 1px solid rgba(52, 9, 209, 0.867);
+}
+
+.contact-form form .form-control textarea:focus~span {
+    top: -25px;
+    font-size: 18px;
+    z-index: 3;
+}
+
+
+@media screen and (max-width:557px) {
+    .contact-container{
+        max-height: 80vh;
+    }
+
+    .contact-form .toast.show{
+        width: 50%;
+    }
+}
+
+@media screen and (max-width:518px) {
+    .contact-container h1 {
+        font-size: 35px;
+    }
+}

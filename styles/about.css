@@ -1,0 +1,86 @@
+@import url("../global_style.css");
+
+div.section-experience{
+    color:aliceblue;
+    display: flex; 
+    flex-direction: column;
+    margin: 30px 0;
+    align-items: center;
+    justify-content: center;
+}
+
+h2.title-education{
+  animation-delay: .2s;
+}
+.education{
+  animation-delay: .22s;
+}
+
+
+div.section-experience h2{
+    font-size: 60px;
+    font-family: serif;
+    margin: 40px 0;
+    color: var(--primary-color);
+}
+
+div.section-experience .experience-content{
+    display: flex;
+    width: 100%;
+    padding: 0 20px;
+    gap:24px;
+    margin-bottom: 40px;
+    
+}
+
+div.section-experience .experience-content p{
+    border-left: 1.5px solid var(--primary-color);
+    padding-left: 10px;
+    font-size: 20px;
+}
+
+
+div.section-experience .experience-content p a{
+  color: aliceblue;
+  text-decoration-color: var(--primary-color);
+  transition: all 0.1s ease-in;
+  padding: 10px;
+}
+
+div.section-experience .experience-content p a:hover{
+    text-decoration-color: #f897e8;
+    font-style: italic;
+}
+div.section-experience .experience-content p:nth-child(2){
+  margin-right: 20px;
+}
+
+
+@media screen and (max-width:1042px){
+    div.section-experience .experience-content{
+      flex-wrap: wrap;
+    }
+
+    div.section-experience .experience-content p{
+      flex:45%;
+      margin-bottom: 20px;
+      line-height: 30px;
+    }
+
+     
+}
+
+@media screen and (max-width:560px){
+   
+
+    div.section-experience .experience-content p{
+      flex:100%;
+      margin-right: 0px;
+      line-height: 30px;
+    }
+
+      div.section-experience h2{
+        font-size: 40px;
+      }
+     
+}

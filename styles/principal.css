@@ -1,0 +1,282 @@
+@import url("../global_style.css");
+
+.principal {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    padding: 0;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    padding: 14px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.principal .right-section img.responsive{
+    display: none;
+}
+
+.principal .sections {
+    width: 50%;
+}
+
+.principal .left-section {
+    padding: 10px 12px;
+    color: #fff;
+    margin-top: 40px;
+    border-right: 2px solid var(--primary-color);
+}
+
+.principal .left-section .about-text p {
+    font-size: 30px;
+}
+
+.left-section .names {
+    color: #fff;
+    font-weight: bold;
+    margin-top: 60px;
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-shadow: 0 0 4px var(--glow-color),
+        0 0 6px var(--glow-color),
+        0 0 10px var(--glow-color),
+        0 0 16px var(--glow-color),
+        0 0 20px var(--glow-color);
+}
+
+
+.principal .right-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 60px;
+    width: 40%;
+    position: relative;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.principal .right-section img.main-img {
+    width:260px;
+    height: 260px;
+    position: absolute;
+   object-fit: cover;
+   bottom: 10%;
+    left: 22%;
+    border-radius: 50%;
+    filter: grayscale(100%);
+    transition: bottom .5s, right .5s;
+    bottom:90px;
+}
+
+.principal .right-section img.back-img{
+    left: 14rem;
+    width: 360px;
+}
+
+
+.principal .right-section:hover .main-img {
+    right: 50px;
+    bottom: 60px;
+
+    
+}
+
+.principal .left-section .about-text {
+    padding: 10px 12px;
+    margin-top: 20px;
+    text-align: left;
+    
+}
+
+.principal .left-section .about-text p {
+    font-family: 'Roboto', sans-serif;
+    line-height: 35px;
+    font-size: 20px;
+}
+
+.principal .left-section .buttons {
+    padding: 20px 0;
+    margin-top: 12px;
+    display: flex;
+    position: relative;
+}
+
+.principal .left-section .buttons a {
+    margin: 8px 0;
+    padding: 10px;
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    text-align:left;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 18px;
+    text-decoration: none;
+    z-index: 9999;
+}
+
+.principal .left-section .buttons button span {
+    margin-left: 18px;
+}
+
+.principal .left-section .buttons a:hover {
+    opacity: 0.5;
+}
+
+@media screen and (max-width:1140px){
+    .principal .right-section img.main-img{
+        bottom:125px;
+        left:18%;
+    }
+}
+@media screen and (max-width:1140px){
+    .principal .right-section img.main-img{
+        bottom:125px;
+        left:18%;
+    }
+}
+@media screen and (max-width:950px){
+    .principal .right-section img.main-img{
+        bottom:145px;
+        left:12%;
+    }
+}
+@media screen and (max-width:902px){
+    .principal .right-section{
+       display: none;
+    }
+    .principal .sections.left-section{
+        margin: 0;
+        padding: 0;
+        position: relative;
+        border-radius: 4px;
+       width: 100%;
+       display: flex;
+       flex-direction: column;
+       border:none;
+      align-items: center;
+        background-image: url("../assets/images/j7_coder.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .principal .sections.left-section .names{
+        position:absolute;
+        top: 40px;
+        font-size: 50px;
+    }
+
+
+         .principal .sections.left-section .about-text{
+            margin-top: 38px;
+             display: flex;
+            background-color: rgba(0,0,0, 0.8); /* Black w/opacity/see-through */
+            color: white;
+            font-weight: bold;
+            border: 3px solid #f1f1f1;
+            width: 100%;
+            padding: 20px;
+           align-items: center;
+            height: 40rem;
+            border-radius: 3px;
+        }
+
+        .principal .sections.left-section .about-text p{
+            font-size: 35px;
+            font-weight:normal;
+            line-height: 1.4;
+        }
+
+         .principal .sections.left-section .buttons{
+            position: absolute;
+           top: 80%;
+         }
+}
+
+@media screen and (max-width:896px) {
+.principal .sections.left-section h3.names{
+    top: 160px;
+    z-index: 2;
+    font-size: 35px;
+}
+    .nav-bar {
+        flex-direction: column;
+        min-width: 100%;
+        box-sizing: border-box;
+    }
+
+    .nav-bar .logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+
+    .nav-bar ul {
+        margin-bottom: 20px;
+    }
+
+        .principal .sections.left-section .about-text{
+            margin-top: 164px;
+            padding-bottom: 30px;
+        }
+
+}
+
+@media screen and (max-width:790px){
+  .principal .left-section h3.names{
+    font-size: 28px;
+  }
+
+   .principal .sections.left-section .about-text{
+    height: 50rem;
+   }
+
+     .principal .sections.left-section .about-text p{
+        margin-top: 30px;
+     }
+
+      .principal .sections.left-section .buttons{
+           top: 86%;
+         }
+}
+@media screen and (max-width:600px){
+  .principal .sections.left-section h3.names{
+   top: 80px;
+  }
+
+   .principal .sections.left-section .about-text{
+    margin-top: 75px;
+   }
+
+     .principal .sections.left-section .about-text p{
+        font-size: 30px;
+     }
+
+      .principal .sections.left-section .buttons{
+           top: 86%;
+         }
+}
+
+@media screen and (max-width:436px){
+  .principal .sections.left-section h3.names{
+   top: 80px;
+   font-size: 24px;
+  }
+
+   .principal .sections.left-section .about-text{
+    padding: 12px;
+   }
+
+     .principal .sections.left-section .about-text p{
+        font-size: 28px;
+        line-height: 1.1;
+     }
+
+      .principal .sections.left-section .buttons{
+           top: 86%;
+         }
+}
+
