@@ -4,7 +4,7 @@ function handleActiveClass() {
     const linkContainer = document.getElementById("link-container");
     const linkElements = linkContainer.querySelectorAll(".nav-links ");
 
-    linkElements.forEach(function (link) {
+    linkElements.forEach(link => {
 
         link.addEventListener("click", function () {
             let currentLink = document.querySelector(".nav-links.active");
@@ -48,11 +48,11 @@ function toggleclassName(element, className) {
     element.classList.toggle(className)
 }
 
-btn_close.addEventListener("click", function () {
+btn_close.addEventListener("click", () => {
     toggleclassName(sideNave, "show")
 })
 
-btn_hamburger.addEventListener("click", function () {
+btn_hamburger.addEventListener("click", () => {
     toggleclassName(sideNave, "show")
 })
 

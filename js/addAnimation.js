@@ -1,5 +1,5 @@
 function animateElementOnView(elementClass, animationClass, type = "single") {
-    const observer = new IntersectionObserver(function (entries) {
+    const observer = new IntersectionObserver(entries => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add(animationClass);
@@ -15,7 +15,7 @@ function animateElementOnView(elementClass, animationClass, type = "single") {
 
     if (type === "multiple") {
         const elements = document.querySelectorAll(elementClass)
-        elements.forEach(function (element) {
+        elements.forEach(element => {
             observer.observe(element);
         })
     } else {
