@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+     align-items: center;
+     padding: 20px;
+}
+
+dialog{
+
+  position: fixed;
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100vh; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+  display: grid;
+  place-items: center;
+  border: none;
+  display: none;
+}
+
+dialog.show{
+    display:grid;
+}
+
+dialog form {
+    background-color: azure;
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 0;
+    border-radius: 4px;
+}
+
+dialog form input{
+   border: 1px solid #ccc;
+   padding: 8px;
+   border-radius: 6px;
+   outline: none;
+   margin: 20px 0;
+}
+
+dialog form div.modal-footer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+div.modal-footer button.cancel,button.add{
+    border:none;
+    padding: 6px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button.cancel{
+    background-color: bisque;
+}
+
+button.add{
+    background-color: #8892eb;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+
+
+.principal{
+    margin-top: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.principal section.product{
+    overflow-y: scroll;
+    height: 60vh;
+}
+
+.principal section.product,.principal section.cart{
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.principal section.cart .title-carrito,.principal section.product .title-section{
+    width: 100%;
+    text-align: center;
+    font-size: 30px;
+}
+
+.principal section.cart p{
+     width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+ul{
+     width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+div.product-text{
+    display: flex;
+    gap: 20px;
+}
+
+ul li{
+    box-shadow: 1px 1px 1px 1px rgba(192, 192, 192, 0.2);
+    position: relative;
+    padding: 20px;
+}
+
+
+ul li div.product-text{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+ul li div.product-text p{
+    font-size: 20px;
+}
+
+ul li div.product-text span{
+    font-weight: bold;
+}
+
+
+button.btn-agregar{
+   position: absolute;
+   border: none;
+   border-radius: 4px;
+   right: 20px;
+   bottom: 6px;
+   cursor: pointer;
+   padding: 6px;
+   background-color: #8892eb;
+   color:#ccc;
+
+}
+
+button.btn-agregar:hover{
+    opacity: 0.8
+}
+
+table {
+    display: none;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+table.show {
+    display: table;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 6px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+
+div.sub-total{
+    display: none;
+    position: relative;
+    width: 100%;
+    background-color: #f1eeee;
+    height: 40px;
+   
+}
+
+div.sub-total.show{
+    display: flex;
+}
+
+div.sub-total p.comentario{
+    position:absolute;
+    font-size: 20px;
+    font-weight: 400;
+    left:-190px;
+    bottom: 6px;
+}
+div.sub-total p.precio{
+    position:absolute;
+    font-size: 20px;
+    font-weight: 900;
+    right:-220px;
+    bottom: 6px;
+}

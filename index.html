@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/app.css">
+    <title>Examen modulo 2</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <h1 class="title">Bienvenido al super mercado</h1>
+    </header>
+    <main class="principal">
+        <section class="product">
+            <h4 class="title-section">Productos disponibles</h4>
+            <ul class="product-list"></ul>
+        </section>
+        <section class="cart">
+            <h4 class="title-carrito">Tu carrito</h4>
+            <p class="vacio">El carrito esta vacio!!</p>
+            <table>
+                <thead>
+                    <tr></tr>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Precio Unit.</th>
+                    <th>Total</th>
+                    </tr>
+                    <tr>
+                </thead>
+
+                <tbody id="tableBody"></tbody>
+            </table>
+
+            <div class="sub-total">
+            </div>
+        </section>
+    </main>
+
+    <dialog id="dialogueBox">
+        <form id="form-cantidad">
+            <h3>¿Cuanto quieres agregar?</h3>
+            <input type="text" name="cantidad" placeholder="Ingresar la cantidad" />
+
+            <div class="modal-footer">
+                <button id="dialogueClose" class="cancel">Terminar</button>
+                <button id="dialogueAdd" class="add">Agregar</button>
+            </div>
+        </form>
+    </dialog>
+
+
+    <script src="./assets/js/_object.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
